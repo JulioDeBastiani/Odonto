@@ -1,0 +1,5 @@
+CREATE TABLE Indicacoes (
+    Id VARCHAR(36) NOT NULL,
+    Descricao VARCHAR(255) NOT NULL,
+    PRIMARY KEY (Id)
+);
