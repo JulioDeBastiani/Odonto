@@ -1,4 +1,4 @@
-CREATE TABLE Indicacoes (
+CREATE TABLE Alunos (
     Id INT NOT NULL,
     Nome VARCHAR(255) NOT NULL,
     PRIMARY KEY (Id)
