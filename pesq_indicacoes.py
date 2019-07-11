@@ -25,12 +25,19 @@ class PesqIndicacoes(QDialog):
         def on_cancelar():
             self.close()
 
+        def on_textChanged():
+            if self.ui.edtNome.text():
+                self.filtrar(self.ui.edtNome.text())
+
         self.ui.btnConfirmar.clicked.connect(on_confirmar)
         self.ui.btnCancelar.clicked.connect(on_cancelar)
         self.ui.tableWidget.doubleClicked.connect(on_confirmar)
+        self.ui.edtNome.textChanged.connect(on_textChanged)
 
     def filtrar(self, nome):
-        self.ui.tableWidget.clear()
+        while self.ui.tableWidget.rowCount() > 0:
+            self.ui.tableWidget.removeRow(0)
+
         rows = []
 
         if self.ui.edtNome.text():
