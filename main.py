@@ -1,9 +1,10 @@
-from PyQt5.QtWidgets import QApplication, QLabel, QWidget, QPushButton, QVBoxLayout, QHBoxLayout
-from CadIndicacoes import CadIndicacoes
+from PyQt5.QtWidgets import QApplication
+from main_window import MainWindow
 
 def main():
     app = QApplication([])
-    window = CadIndicacoes()
+    window = MainWindow()
+    window.show()
     app.exec_()
 
 if __name__ == '__main__':
